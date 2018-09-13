@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Dãy vừa nhập là: <p id="input"></p>
+<input id="box">
+<button onclick = "push()">Nhập</button>
+<button onclick = "change()">Đổi</button>
+<br>
+Dãy sau khi đổi là: <p id="result"></p>
+<script>
+    let list = [];
+    function push(){
+        let input = document.getElementById("box").value;
+        list.push(input);
+        document.getElementById("input").innerHTML = list;
+    }
+    function change(){
+        for(let i in list){
+            if(list[i] === "-"){
+                list[i] = "_";
+            }
+        }
+        document.getElementById("result").innerHTML = list;
+    }
+</script>
+</body>
+</html>

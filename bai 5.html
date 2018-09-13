@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Chuỗi đầu <p id="list1"></p>
+<input id="box1">
+<button onclick = "push1()">Nhập</button>
+<br>
+Chuỗi sau <p id="list2"></p>
+<input id="box2">
+<button onclick = "push2()">Nhập</button>
+<br>
+<button onclick = "check()">Kiểm tra</button>
+<script>
+    let list1 = [];
+    let list2 = [];
+    function push1(){
+        let input1 = document.getElementById("box1").value;
+        list1.push(input1);
+        document.getElementById("list1").innerHTML = list1;
+    }
+    function push2(){
+        let input2 = document.getElementById("box2").value;
+        list2.push(input2);
+        document.getElementById("list2").innerHTML = list2;
+    }
+    function check(){
+        if(list1.length !== list2.length){
+            alert("Không giống nhau");
+        }
+        else if(list2.join(",") !== list1.join(",")){
+            alert("Không giống nhau")
+        }else{
+            alert("Giống nhau");
+        }
+    }
+</script>
+</body>
+</html>

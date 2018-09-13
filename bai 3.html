@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let box = ['a','b','c','dad','mom','son','child','1','2',3,4];
+    let num = 0;
+    for (i in box){
+        if(typeof box[i] === 'number'){
+            num++;
+        }
+    }
+    alert("Số lượng ký tự số là " + num);
+</script>
+</body>
+</html>
